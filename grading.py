@@ -1,4 +1,5 @@
 import streamlit as st
+import datetime
 
 st.title("호구조사하기!")
 
@@ -44,7 +45,7 @@ elif st.session_state.page == 'page3':
 
 # 페이지4
 elif st.session_state.page == 'page4':
-    birth = st.date_input(label=f"{st.session_state['name']}님의 생일은 언제입니까")
+    birth = st.date_input(label=f"{st.session_state['name']}님의 생일은 언제입니까", value=datetime.date(1980, 1, 1), min_value=datetime.date(1980, 1, 1), max_value=datetime.date(2000, 1, 1))
 
     if st.button("이전 페이지"):
         st.session_state.page = 'page3'
