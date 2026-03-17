@@ -66,7 +66,7 @@ elif st.session_state.page == 'page5':
 
     if st.button("다음 페이지"):
         st.session_state['marriage'] = marriage
-        st.session_state.page = 'page_final' 
+        st.session_state.page = 'page_6' 
         st.rerun()
 
 # 페이지6
